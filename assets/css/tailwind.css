@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+@layer utilities {
+    .font-nunitoblack {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+h1,h2,h3,p {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.text-nunitoblack {
+    @apply font-nunitoblack;
+    font-weight:900;
+}
+
+.text-nunito {
+    @apply font-nunitoblack;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero img {
+    aspect-ratio: auto 1280 / 750;
+}
+
+.button svg {
+    margin:0 auto;
+}
