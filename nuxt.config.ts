@@ -1,4 +1,6 @@
 export default {
+    generate: {},
+
     head: {
         title: 'Test',
         meta: [
