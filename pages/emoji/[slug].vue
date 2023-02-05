@@ -1,94 +1,95 @@
 <template>
   <div>
-    <SeoHead
-        :title="emoji?.title"
-        :description="emoji?.desc"/>
-
     <section class="bg-white dark:bg-gray-900">
       <div
           class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-6 ">
 
         <div class="sm:pb-10 xs:pb-10">
-          <img class="mb-4 w-full lg:mb-0 rounded-lg aspect-square" :src="emoji?.sizes?.full" width="512" height="512"
-               alt="feature image">
+          <img
+              class="mb-4 w-full lg:mb-0 rounded-lg aspect-square"
+              :src="emoji?.sizes?.full"
+              width="512"
+              height="512"
+              alt="feature image"
+              loading="lazy">
           <div class="flex items-center justify-center">
 
             <ul class="flex flex-wrap items-center text-sm font-medium text-gray-900 bg-white rounded-lg dark:bg-gray-700 dark:text-white">
 
-              <li id="Blue" @click="select($event)" class="">
+              <li id="cat-Blue" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-primary-600 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-primary-700 focus:text-gray-50">
                   <template v-if="category === 'Blue'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
 
-              <li id="Violet" @click="select($event)" class="">
+              <li id="cat-Violet" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-purple-500 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-purple-600 focus:text-gray-50">
                   <template v-if="category === 'Violet'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
 
-              <li id="Yellow" @click="select($event)" class="">
+              <li id="cat-Yellow" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-yellow-300 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-yellow-300 focus:text-gray-50">
                   <template v-if="category === 'Yellow'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
-              <li id="Red" @click="select($event)" class="">
+              <li id="cat-Red" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#b10101] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Red'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
-              <li id="Pink" @click="select($event)" class="">
+              <li id="cat-Pink" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#db8eb6] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Pink'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
-              <li id="Teal" @click="select($event)" class="">
+              <li id="cat-Teal" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#1ba5be] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Teal'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
 
-              <li id="Green" @click="select($event)" class="">
+              <li id="cat-Green" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#83C431] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Green'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
 
-              <li id="White" @click="select($event)" class="">
+              <li id="cat-White" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-100 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-grey-50 focus:text-gray-900">
                   <template v-if="category === 'White'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
 
-              <li id="Black" @click="select($event)" class="">
+              <li id="cat-Black" @click="select($event)" class="">
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-900 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-gray-900 focus:text-gray-50">
                   <template v-if="category === 'Black'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -189,16 +190,20 @@
 
             <div v-if="!item.loaded" class="relative bg-gray-500 bg-opacity-10 col-span-1">
               <div class="absolute top-0 left-0 bottom-0 right-0 flex items-center justify-center">
-                <img src="~/assets/images/loader.svg" class="aspect-square"/>
+                <img
+                    src="~/assets/images/loader.svg"
+                    class="aspect-square"
+                    loading="lazy"/>
               </div>
             </div>
 
             <NuxtLink
-                :to="'/emoji/' + item.hurl + '#' + category">
-              <img :src="item.sizes.thumb"
-                   @load="onUpdateEmojiInList(item)"
-                   class="aspect-square w-full"
-                   :class="{'hidden' : !item.loaded}"/>
+                :to="getUrl(item)">
+              <img
+                  :src="item.sizes.thumb"
+                  @load="item.loaded = true"
+                  class="aspect-square w-full"
+                  :class="{'hidden' : !item.loaded}"/>
             </NuxtLink>
 
             <h2 class="text-center mb-2 text-lg font-bold leading-tight text-gray-900 dark:text-white">
@@ -212,45 +217,58 @@
   </div>
 </template>
 
+<script setup>
+const route = useRoute();
+
+const {data} = await useFetch('https://bluemoji.io/bluemoji.json');
+
+if (data.value?.length) {
+  const curEmoji = data.value.find(item => item.hurl === route.params.slug);
+
+  useHead({
+    title: curEmoji.title + ' Blue Emoji - Free Download',
+    meta: [
+      {name: 'description', content: curEmoji.desc}
+    ],
+    link: [
+      {rel: 'canonical', href: 'https://bluemoji.io' + route.fullPath.replace(route.hash, '')}
+    ]
+  });
+}
+</script>
+
 <script>
-import SeoHead from "~/components/seo/Head";
-import {mapActions, mapGetters, mapMutations} from "vuex";
+import * as emojisJson from "~/public/bluemoji.json";
 
 export default {
-  components: {
-    SeoHead
-  },
-
   data() {
     return {
+      category: 'Blue',
+      emoji: {},
+      emojis: [],
+      allEmojis: emojisJson.default,
       loadingSrc: 'loader.svg',
       badgeIds: ['81', '82', '83', '84', '85', '86', '87']
     }
   },
   computed: {
-    ...mapGetters(['category', 'emoji', 'emojis']),
     hurl() {
       return this.$route.params.slug;
     }
   },
 
   methods: {
-    ...mapActions(['toggleCategory', 'loadEmoji', 'loadEmojis']),
-    ...mapMutations(['updateEmojiInList', 'clearEmoji']),
-
-    shuffleJson(json) {
-      for (let i = json.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [json[i], json[j]] = [json[j], json[i]];
-      }
-      return json;
-    },
     select: function (event) {
-      let category = event.currentTarget.id;
+      this.category = event.currentTarget.id.replace('cat-', '');
 
-      this.toggleCategory(category);
-      this.loadEmoji(this.hurl);
-      this.updateUrl('/emoji/' + this.hurl + '#' + category);
+      let url = '/emoji/' + this.hurl;
+      if (this.category !== 'Blue') {
+        url += '#' + this.category;
+      }
+
+      this.updateUrl(url);
+      this.loadEmoji();
+      this.loadEmojis();
     },
     updateUrl(newUrl) {
       this.$router.push(newUrl);
@@ -258,20 +276,69 @@ export default {
     showBadge(emoji) {
       return this.badgeIds.includes(emoji)
     },
-    onUpdateEmojiInList(emoji) {
-      emoji.loaded = true;
+    loadEmoji() {
+      let emoji = this.allEmojis
+          .filter((emoji) => emoji.hurl === this.hurl)
+          .map(emoji => {
+            return {
+              id: emoji.src,
+              hurl: emoji.hurl,
+              sizes: {
+                thumb: '/emoji/' + this.category + '/256/' + emoji.src + '.png',
+                full: '/emoji/' + this.category + '/' + emoji.src + '.png',
+              },
+              title: emoji.title,
+              desc: emoji.desc,
+              tags: emoji.tags,
+              loaded: false
+            }
+          });
 
-      this.updateEmojiInList(emoji);
+      this.emoji = emoji[0];
+    },
+    loadEmojis() {
+      let emojis = this.allEmojis
+          .filter(emoji => emoji.hurl !== this.hurl)
+          .map(emoji => {
+            return {
+              id: emoji.src,
+              hurl: emoji.hurl,
+              sizes: {
+                thumb: '/emoji/' + this.category + '/256/' + emoji.src + '.png',
+                full: '/emoji/' + this.category + '/' + emoji.src + '.png',
+              },
+              title: emoji.title,
+              desc: emoji.desc,
+              tags: emoji.tags,
+              loaded: false
+            }
+          });
+
+      this.emojis = this.shuffleJson(emojis).slice(0, 8);
+    },
+    shuffleJson(json) {
+      for (let i = json.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [json[i], json[j]] = [json[j], json[i]];
+      }
+      return json;
+    },
+    getUrl(item) {
+      let url = '/emoji/' + item.hurl;
+
+      if (this.category !== 'Blue') {
+        url += '#' + this.category;
+      }
+
+      return url;
     }
   },
 
   created() {
-    this.loadEmojis();
-    this.loadEmoji(this.hurl);
-  },
+    this.category = this.$route.hash ? this.$route.hash.replace('#', '') : 'Blue';
 
-  unmounted() {
-    this.clearEmoji();
+    this.loadEmoji();
+    this.loadEmojis();
   }
 }
 </script>

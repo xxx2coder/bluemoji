@@ -1,9 +1,5 @@
 <template>
   <div>
-    <SeoHead
-        title="About Blue Emoji by Tanya Mau"
-        description="Test"/>
-
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
       <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
         <article
@@ -29,7 +25,8 @@
                 target="_blank">Twitter on January 2023</a>, which was a surprise. It was decided to create this web
             page, where all the Blue Emoji are gathered in one place, higher definition emoticons are added, and new
             faces can be created in the future by its original author.</p>
-          <figure><img src="~/assets/images/about_image.png" alt="Blue Emoji, Author Tanya Mau">
+          <figure>
+            <img src="~/assets/images/about_image.png" alt="Blue Emoji, Author Tanya Mau" loading="lazy"/>
             <figcaption></figcaption>
           </figure>
 
@@ -80,12 +77,16 @@
   </div>
 </template>
 
-<script>
-import SeoHead from "~/components/seo/Head";
+<script setup>
+const route = useRoute();
 
-export default {
-  components: {
-    SeoHead
-  }
-}
+useHead({
+  title: 'About Blue Emojis by Tanya Mau',
+  meta: [
+    {name: 'description', content: 'Test'}
+  ],
+  link: [
+    {rel: 'canonical', href: 'https://bluemoji.io' + route.fullPath.replace(route.hash, '')}
+  ]
+})
 </script>

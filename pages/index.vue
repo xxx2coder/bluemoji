@@ -1,9 +1,5 @@
 <template>
   <div>
-    <SeoHead
-        title="Blue Emoji or Joobi - Free Smiley Download"
-        description="Test"/>
-
     <!-- HERO -->
     <section
         class="py-8 hero bg-[url('~/assets/images/hero.png')] bg-cover bg-center bg-no-repeat bg-white dark:bg-gray-900">
@@ -29,7 +25,13 @@
 
         </div>
         <div style="max-width:540px; max-height:405px;" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img class="" width="540" height="405" src="~/assets/images/mockups.png" alt="mockup">
+          <img
+              class=""
+              width="540"
+              height="405"
+              src="~/assets/images/mockups.png"
+              alt="mockup"
+              loading="lazy"/>
         </div>
       </div>
     </section>
@@ -50,7 +52,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-primary-600 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-primary-700 focus:text-gray-50">
                   <template v-if="category === 'Blue'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -59,7 +61,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-purple-500 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-purple-600 focus:text-gray-50">
                   <template v-if="category === 'Violet'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -67,7 +69,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-yellow-300 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-yellow-300 focus:text-gray-50">
                   <template v-if="category === 'Yellow'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -76,7 +78,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#b10101] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Red'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -84,7 +86,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#db8eb6] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Pink'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -92,7 +94,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#1ba5be] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Teal'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -101,7 +103,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-[#83C431] rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-green-600 focus:text-gray-50">
                   <template v-if="category === 'Green'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -109,7 +111,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-100 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-grey-50 focus:text-gray-900">
                   <template v-if="category === 'White'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -117,7 +119,7 @@
                 <button type="button"
                         class="w-14 h-14 flex items-center justify-center mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-gray-900 rounded-lg border border-gray-200 hover:text-blue-700 focus:z-10 focus:bg-gray-900 focus:text-gray-50">
                   <template v-if="category === 'Black'">
-                    <img src="~/assets/images/tick.svg"/>
+                    <img src="~/assets/images/tick.svg" loading="lazy"/>
                   </template>
                 </button>
               </li>
@@ -133,16 +135,19 @@
 
             <div v-if="!emoji.loaded" class="relative bg-gray-500 bg-opacity-10 col-span-1">
               <div class="absolute top-0 left-0 bottom-0 right-0 flex items-center justify-center">
-                <img src="~/assets/images/loader.svg" class="aspect-square"/>
+                <img
+                    src="~/assets/images/loader.svg"
+                    class="aspect-square"/>
               </div>
             </div>
 
             <NuxtLink
-                :to="'/emoji/' + emoji.hurl + '#' + category">
-              <img :src="emoji.sizes.thumb"
-                   @load="onUpdateEmojiInList(emoji)"
-                   class="aspect-square w-full"
-                   :class="{'hidden' : !emoji.loaded}"/>
+                :to="getUrl(emoji)">
+              <img
+                  :src="emoji.sizes.thumb"
+                  @load="emoji.loaded = true"
+                  class="aspect-square w-full"
+                  :class="{'hidden' : !emoji.loaded}"/>
             </NuxtLink>
 
             <h2 class="text-center mb-2 text-lg font-bold leading-tight text-gray-900 dark:text-white">
@@ -158,35 +163,43 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  title: 'Blue Emoji or Joobi - Free Smiley Download',
+  meta: [
+    {name: 'description', content: 'Test'}
+  ],
+  link: [
+    {rel: 'canonical', href: 'https://bluemoji.io/'}
+  ]
+})
+</script>
+
 <script>
-import SeoHead from "~/components/seo/Head";
-import {mapGetters, mapMutations, mapActions} from 'vuex';
+import * as emojisJson from "~/public/bluemoji.json";
 
 export default {
-  components: {
-    SeoHead
-  },
-
   data() {
     return {
+      category: 'Blue',
+      emojis: [],
+      allEmojis: emojisJson.default,
       loadingSrc: 'loader.svg',
       badgeIds: ['81', '82', '83', '84', '85', '86', '87'],
     }
   },
 
-  computed: {
-    ...mapGetters(['category', 'emojis'])
-  },
-
   methods: {
-    ...mapActions(['toggleCategory', 'loadEmojis']),
-    ...mapMutations(['updateEmojiInList']),
-
     select(e) {
-      let category = e.currentTarget.id;
+      this.category = e.currentTarget.id;
 
-      this.toggleCategory(category);
-      this.updateUrl('#' + category);
+      if (this.category !== 'Blue') {
+        this.updateUrl('#' + this.category);
+      } else {
+
+        this.updateUrl('');
+      }
+      this.loadEmojis();
     },
     updateUrl(newUrl) {
       this.$router.push(newUrl);
@@ -194,13 +207,36 @@ export default {
     showBadge(emoji) {
       return this.badgeIds.includes(emoji.id)
     },
-    onUpdateEmojiInList(emoji) {
-      emoji.loaded = true;
+    loadEmojis() {
+      this.emojis = this.allEmojis
+          .map(emoji => {
+            return {
+              id: emoji.src,
+              hurl: emoji.hurl,
+              sizes: {
+                thumb: '/emoji/' + this.category + '/256/' + emoji.src + '.png',
+                full: '/emoji/' + this.category + '/' + emoji.src + '.png',
+              },
+              title: emoji.title,
+              desc: emoji.desc,
+              tags: emoji.tags,
+              loaded: false
+            }
+          });
+    },
+    getUrl(item) {
+      let url = '/emoji/' + item.hurl;
 
-      this.updateEmojiInList(emoji);
+      if (this.category !== 'Blue') {
+        url += '#' + this.category;
+      }
+
+      return url;
     }
   },
-  created() {
+  mounted() {
+    this.category = this.$route.hash ? this.$route.hash.replace('#', '') : 'Blue';
+
     this.loadEmojis();
   }
 }

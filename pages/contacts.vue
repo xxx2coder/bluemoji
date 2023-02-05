@@ -1,9 +1,5 @@
 <template>
   <div>
-    <SeoHead
-        title="Contact Tanya Mau"
-        description="Test"/>
-
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900" style="min-height:520px; padding-top:100px">
       <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
         <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
@@ -23,12 +19,16 @@
   </div>
 </template>
 
-<script>
-import SeoHead from "~/components/seo/Head";
+<script setup>
+const route = useRoute();
 
-export default {
-  components: {
-    SeoHead
-  }
-}
+useHead({
+  title: 'Contact Tanya Mau',
+  meta: [
+    {name: 'description', content: 'Test'}
+  ],
+  link: [
+    {rel: 'canonical', href: 'https://bluemoji.io' + route.fullPath.replace(route.hash, '')}
+  ]
+})
 </script>
